@@ -1,0 +1,22 @@
+{
+  "User": [
+    {
+      "prename": "vincent",
+      "surname": "mattes",
+      "uuid": "",
+      "birthday": "10.02.1998",
+      "mail": "vin@mat.de",
+      "address": "geißb.15",
+      "phonenumber": "01739775822"
+    },
+    {
+      "prename": "vincent",
+      "surname": "mattes",
+      "uuid": "",
+      "birthday": "10.02.1998",
+      "mail": "vin@mat.com",
+      "address": "geißb.15",
+      "phonenumber": "01739775822"
+    }
+  ]
+}

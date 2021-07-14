@@ -1,0 +1,12 @@
+C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\ConsoleManager\bin\Debug\net5.0\ConsoleManager.deps.json
+C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\ConsoleManager\bin\Debug\net5.0\ConsoleManager.dll
+C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\ConsoleManager\bin\Debug\net5.0\ref\ConsoleManager.dll
+C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\ConsoleManager\bin\Debug\net5.0\ConsoleManager.pdb
+C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\ConsoleManager\obj\Debug\net5.0\ConsoleManager.csprojAssemblyReference.cache
+C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\ConsoleManager\obj\Debug\net5.0\ConsoleManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\ConsoleManager\obj\Debug\net5.0\ConsoleManager.AssemblyInfoInputs.cache
+C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\ConsoleManager\obj\Debug\net5.0\ConsoleManager.AssemblyInfo.cs
+C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\ConsoleManager\obj\Debug\net5.0\ConsoleManager.csproj.CoreCompileInputs.cache
+C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\ConsoleManager\obj\Debug\net5.0\ConsoleManager.dll
+C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\ConsoleManager\obj\Debug\net5.0\ref\ConsoleManager.dll
+C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\ConsoleManager\obj\Debug\net5.0\ConsoleManager.pdb

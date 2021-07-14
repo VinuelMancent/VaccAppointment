@@ -1,0 +1,45 @@
+{
+  "Appointments": [
+    {
+      "Date": "31.12.2021",
+      "Appointments": [
+        {
+          "Mail": "vin.mat@gmail.com",
+          "IsGiven": true,
+          "Uuid": "383bf80d-0550-4ccc-bd63-b53c51da9415",
+          "Time": "12:00"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "d431b16a-a7c0-430e-b376-17dc3bdd54ee",
+          "Time": "12:10"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "9c1ee4a9-5b88-42ad-a293-59f21e5d3def",
+          "Time": "12:20"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "a0cce171-deb3-4afc-839f-7edf7896fe6e",
+          "Time": "12:30"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "ed842ff5-d4cc-4666-be4b-ee1973a42e28",
+          "Time": "12:40"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "b117654e-0d17-408f-b8ec-7fa3b49a2598",
+          "Time": "12:50"
+        }
+      ]
+    }
+  ]
+}

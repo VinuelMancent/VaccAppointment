@@ -1,0 +1,169 @@
+{
+  "Appointments": [
+    {
+      "Date": "10.02.2021",
+      "Appointments": [
+        {
+          "Mail": "vincentmattes@gmail.com",
+          "IsGiven": true,
+          "Uuid": "9fafd8c3-b880-4152-b847-aa04ee09fd05",
+          "Time": "11:00"
+        },
+        {
+          "Mail": "vin@mat.de",
+          "IsGiven": true,
+          "Uuid": "af91e57f-23c0-4267-98f5-78f6b7dbd006",
+          "Time": "11:00"
+        },
+        {
+          "Mail": "vin@mat.de",
+          "IsGiven": true,
+          "Uuid": "17525159-62eb-4e14-90a5-2b65df10170a",
+          "Time": "11:10"
+        },
+        {
+          "Mail": "v@m.de",
+          "IsGiven": true,
+          "Uuid": "ff4cb0cb-4857-46f3-861d-fc6afb310c10",
+          "Time": "11:10"
+        },
+        {
+          "Mail": "v@m.de",
+          "IsGiven": true,
+          "Uuid": "e69172ff-62c6-4d36-b21c-5db636e29791",
+          "Time": "11:20"
+        },
+        {
+          "Mail": "v@m.com",
+          "IsGiven": true,
+          "Uuid": "c973518d-bdcc-4866-b31b-d73f9919f7b1",
+          "Time": "11:20"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "fa8151c0-80c7-4d22-8392-64a2823ac80b",
+          "Time": "11:30"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "e11e9115-dd32-4f2b-a2cb-7c468dec33ef",
+          "Time": "11:30"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "0637c623-ecf1-4565-9af4-2c5dbbc026ff",
+          "Time": "11:40"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "b59c82ad-daed-4019-8f24-eb3c71a7069e",
+          "Time": "11:40"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "f6a39fc2-3b6d-4e55-9991-b32b99da0ad5",
+          "Time": "11:50"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "0283b05f-5d37-44a0-a85b-b7e50d1de17a",
+          "Time": "11:50"
+        }
+      ]
+    },
+    {
+      "Date": "24.12.2021",
+      "Appointments": [
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "73254ba3-ff48-4edc-98f5-427445bdbaa6",
+          "Time": "11:00"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "1fd71a22-a573-4445-99cd-4ac9f1327a21",
+          "Time": "11:00"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "db0ef0b8-c1b9-4e27-a198-31e29cfb5784",
+          "Time": "11:10"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "20d9bb7b-40b7-47fc-8da1-9f348c42f55e",
+          "Time": "11:10"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "9c88542d-f8cf-4932-bb0b-71a91539a8b4",
+          "Time": "11:20"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "c5840545-1d43-4650-aac7-9deac72e7f4c",
+          "Time": "11:20"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "d29c8c4a-c400-4cad-9973-8f03434ca296",
+          "Time": "11:30"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "fd4aadba-4cc4-4cdd-9c9d-ce941e1f29eb",
+          "Time": "11:30"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "4f11d40c-9f6c-40c9-a318-7d2c83bb767c",
+          "Time": "11:40"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "18c9bbb1-d122-461d-b12e-73e5a573d3a9",
+          "Time": "11:40"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "45f01ddb-eb9e-48e6-a328-9d754cb641b6",
+          "Time": "11:50"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "9abea7c9-344f-430d-9e7d-051a42ff0673",
+          "Time": "11:50"
+        }
+      ]
+    },
+    {
+      "Date": "31.12.2021",
+      "Appointments": [
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "198bed55-f7cb-4a71-99fe-b6edc864dfc7",
+          "Time": "12:30"
+        }
+      ]
+    }
+  ]
+}

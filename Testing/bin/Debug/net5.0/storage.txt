@@ -1,0 +1,68 @@
+{
+  "date": "09.07.2021",
+  "appointments": [
+    {
+      "IsGiven": false,
+      "Uuid": "b6fd7290-0923-4714-95e7-9239a0218ded",
+      "Time": "16:12"
+    },
+    {
+      "IsGiven": false,
+      "Uuid": "a3b27991-42c7-4802-bba7-66649275e2f6",
+      "Time": "16:12"
+    }
+  ]
+}
+{
+  "Date": "09.07.2021"
+}
+{}
+{
+  "Date": "12.07.2021",
+  "Appointments": [
+    {
+      "IsGiven": false,
+      "Uuid": "b7f4a98f-3db1-4cd0-90c7-274e5bf0f21a",
+      "Time": "20:39"
+    },
+    {
+      "IsGiven": false,
+      "Uuid": "0bf41a39-e54c-4900-9733-69960801724b",
+      "Time": "20:39"
+    }
+  ]
+}
+{
+  "Date": "12.07.2021",
+  "Appointments": []
+}
+{
+  "Date": "12.07.2021",
+  "Appointments": []
+}
+{
+  "Date": "12.07.2021",
+  "Appointments": []
+}
+{
+  "Date": "12.07.2021",
+  "Appointments": []
+}
+{
+  "Date": "12.07.2021",
+  "Appointments": []
+}
+{
+  "Date": "12.07.2021",
+  "Appointments": []
+}
+{
+  "Date": "12.07.2021",
+  "Appointments": [
+    {
+      "IsGiven": false,
+      "Uuid": "86326dfa-cd52-449d-9590-b7f58d2d7abf",
+      "Time": "21:35"
+    }
+  ]
+}

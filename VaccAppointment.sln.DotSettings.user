@@ -1,0 +1,19 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVincent_005CDownloads_005CKubernative_002EToolchain_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Vincent\Downloads\Kubernative.Toolchain.dll" /&gt;&#xD;
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=abbb5d94_002Db1c7_002D4dc2_002D9272_002D4fd8b0c8c2cf/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestDaySerialisation" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::D4E295AF-F7F9-4A52-A311-D244C937F12B::net5.0::Testing.TestHelperMethods.TestDifferenceBetweenTimesInMinutes&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::D4E295AF-F7F9-4A52-A311-D244C937F12B::net5.0::Testing.TestWaitingList.TestSerialize&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f52c416e_002D589c_002D427e_002D8627_002D916bfa81d1f1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestSerialisation" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::D4E295AF-F7F9-4A52-A311-D244C937F12B::net5.0::Testing.TestAppointmentManager.TestSerialisation&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::D4E295AF-F7F9-4A52-A311-D244C937F12B::net5.0::Testing.TestAppointmentManager.TestDeserialisation&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::D4E295AF-F7F9-4A52-A311-D244C937F12B::net5.0::Testing.TestHelperMethods.TestDifferenceBetweenTimesInMinutes&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::D4E295AF-F7F9-4A52-A311-D244C937F12B::net5.0::Testing.TestWaitingList.TestSerialize&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
