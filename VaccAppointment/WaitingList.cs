@@ -63,7 +63,7 @@ namespace VaccAppointment
                 string appointmentUuid = appointmentManager.GetClosestFreeFutureAppointment();
                 if (appointmentUuid == String.Empty)
                     return;
-                appointmentManager.GiveAppointment(appointmentUuid, element.mail);
+                appointmentManager.GiveAppointment(appointmentUuid, element.mail, element);
                 toRemove.Add(element);
             }
 

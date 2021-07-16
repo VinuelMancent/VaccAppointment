@@ -29,7 +29,7 @@ namespace VaccAppointment
                 string passwordInput = Console.ReadLine();
                 Login(usernameInput, passwordInput);
             } while (!this.isLoggedIn);
-
+            Console.WriteLine("You are successfully logged in!");
         }
         private void Login(string username, string password)
         {
@@ -40,6 +40,11 @@ namespace VaccAppointment
        
         private void AddNewAppointment()
         {
+            if (!isLoggedIn)
+            {
+                Console.WriteLine("Please login first");
+                return;
+            }
             var day = HelperMethods.CreateDayFromUserInput("On which day should the new appointment(s) be?");
             //check if day is already available
             appointmentManager.AddDay(day, true);
@@ -71,6 +76,11 @@ namespace VaccAppointment
 
         private void ShowInformationOneDay()
         {
+            if (!isLoggedIn)
+            {
+                Console.WriteLine("Please login first");
+                return;
+            }
             var day = HelperMethods.CreateDayFromUserInput();
             ShowInformationOneDay(day);
         }
@@ -93,6 +103,11 @@ namespace VaccAppointment
 
         private void ShowInformationAllDays()
         {
+            if (!isLoggedIn)
+            {
+                Console.WriteLine("Please login first");
+                return;
+            }
             //show how many appointments exist and how many of them are free/given
             showAllAppointments();
             ConsoleManager.ConsoleManager cm = new ConsoleManager.ConsoleManager("choose if you want to", "");

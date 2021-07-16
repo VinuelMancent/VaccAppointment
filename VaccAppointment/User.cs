@@ -94,16 +94,12 @@ namespace VaccAppointment
             //if all entries are valid: give them to the user
             setUserInfos(prenameInput, surnameInput, uuidInput, birthdayInput, mailInput, addressInput, phonenumberInput );
            
-            var success = appointmentManager.GiveAppointment(uuid, mail);
+            var success = appointmentManager.GiveAppointment(uuid, mail, this);
             if (success)
             {
                 serializeUser();
-                Console.WriteLine("Success, you got your appointment");
             }
-            else
-            {
-                Console.WriteLine("Sorry, it was not possible to give you the appointment");
-            }
+            
         }
 
         private void RegisterForWaitingList()

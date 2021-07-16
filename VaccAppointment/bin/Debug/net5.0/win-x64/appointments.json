@@ -1,0 +1,15 @@
+{
+  "Appointments": [
+    {
+      "Date": "31.12.2021",
+      "Appointments": [
+        {
+          "Mail": "test.mat@gmail.com",
+          "IsGiven": true,
+          "Uuid": "cb5f7960-c60f-46bf-9a9b-f817e218f987",
+          "Time": "11:00"
+        }
+      ]
+    }
+  ]
+}

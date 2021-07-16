@@ -1,0 +1,10 @@
+C:\Users\Vincent\Desktop\test\VaccAppointment.exe
+C:\Users\Vincent\Desktop\test\VaccAppointment.dll
+C:\Users\Vincent\Desktop\test\VaccAppointment.deps.json
+C:\Users\Vincent\Desktop\test\VaccAppointment.runtimeconfig.json
+C:\Users\Vincent\Desktop\test\VaccAppointment.pdb
+C:\Users\Vincent\Desktop\test\Newtonsoft.Json.dll
+C:\Users\Vincent\Desktop\test\YamlDotNet.dll
+C:\Users\Vincent\Desktop\test\ConsoleManager.dll
+C:\Users\Vincent\Desktop\test\Kubernative.Toolchain.dll
+C:\Users\Vincent\Desktop\test\ConsoleManager.pdb

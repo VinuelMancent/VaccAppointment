@@ -1,0 +1,22 @@
+{
+  "User": [
+    {
+      "prename": "vincent",
+      "surname": "mattes",
+      "uuid": "4983da79-7b98-4e63-b81c-6cfd97ad142f",
+      "birthday": "10.02.1998",
+      "mail": "vincentmattes@gmail.com",
+      "address": "geißbühlstr. 15",
+      "phonenumber": "01739775822"
+    },
+    {
+      "prename": "vincent",
+      "surname": "mattes",
+      "uuid": "95f497d5-7af9-4cd5-9006-e6ae693f42ac",
+      "birthday": "10.02.1998",
+      "mail": "vin.mat@gmail.com",
+      "address": "geißbühlstr. 15",
+      "phonenumber": "01739775822"
+    }
+  ]
+}

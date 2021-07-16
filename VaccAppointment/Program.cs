@@ -21,7 +21,7 @@ namespace VaccAppointment
             ConsoleManager.ConsoleManager cm = new ConsoleManager.ConsoleManager("Welcome to VaccAppointments. Are you an Admin or a Visitor?", "main");
             cm.AddOption(new Option("Admin", "1", () => InitAndRunAdmin(ref admin)));
             cm.AddOption(new Option("User", "2", () => InitAndRunUser(ref user)));
-            cm.Run(false);
+            cm.Run(true);
         }
 
         private static void InitAndRunAdmin(ref Administrator admin)

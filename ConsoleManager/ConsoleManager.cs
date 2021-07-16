@@ -55,11 +55,8 @@ namespace ConsoleManager
             //first time: print description as well as options
             PrintDescription();
 
-
             do
             {
-                //Console.WriteLine("\n {0,-20} {1,-20} {2,-50}", "name","command", "description");
-                //Console.WriteLine("---------------------------------------------------------------------------");
                 PrintOptions();
                 CallCommand();
                 if(repeat)
@@ -80,14 +77,17 @@ namespace ConsoleManager
         {
             Console.WriteLine("Which command do you want to use?");
             string answer = Console.ReadLine();
+            bool viable = false;
             foreach (var option in _options)
             {
                 if (option.GetCommand().ToLower().Equals(answer.ToLower()))
                 {
                     option.Run();
+                    viable = true;
                 }
             }
-            
+            if(!viable)
+                Console.WriteLine($"{answer} is no valid command!");
         }
         //helpermethod to check, whether to run the mainloop again or not
         private bool askIfAgain()

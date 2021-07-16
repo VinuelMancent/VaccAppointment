@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -12,7 +13,7 @@ namespace VaccAppointment
     {
         private static AppointmentManager instance;
         private List<Day> days = new List<Day>();
-        
+        private static List<INotifcationObserver> notifyObserver = new List<INotifcationObserver>();
 
         public void SerializeAppointments()
         {
@@ -98,7 +99,7 @@ namespace VaccAppointment
             existingDay.AddAppointment(appointment);
         }
 
-        public bool GiveAppointment(string UUID, string mail)
+        public bool GiveAppointment(string UUID, string mail, User user)
         {
             foreach (var day in days)
             {
@@ -107,6 +108,7 @@ namespace VaccAppointment
                     if (app.Uuid == UUID && !app.IsGiven)
                     {
                         app.Give(mail);
+                        notify(day, app, user);
                         SerializeAppointments();
                         return true;
                     }
@@ -160,7 +162,7 @@ namespace VaccAppointment
             {
                 foreach (var app in day.Appointments)
                 {
-                    if (app.IsInFuture())
+                    if (app.IsInFuture() && !app.IsGiven)
                     {
                         Console.WriteLine("-----------------"); 
                         Console.WriteLine($"Day: {day.Date}");
@@ -195,12 +197,21 @@ namespace VaccAppointment
             return givenAppointments;
         }
         #endregion
-        
+
+        private void notify(Day day, Appointment appointment, User user)
+        {
+            foreach (var obs in notifyObserver)
+            {
+                obs.Notify(day, appointment, user);
+            }
+        }
         public static AppointmentManager GetInstance()
         {
             if (instance == null)
             {
                 instance = new AppointmentManager();
+                notifyObserver.Add(new NotificationMailObserver());
+                notifyObserver.Add(new NotificationStdoutObserver());
             }
             return instance;
         }
