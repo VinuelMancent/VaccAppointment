@@ -47,7 +47,17 @@ namespace VaccAppointment
         private void ShowAppointmentsOnDay()
         {
             Day userInput = HelperMethods.CreateDayFromUserInput();
-            var appList = appointmentManager.GetDay(userInput).GetFreeAppointments();
+            Day validDay = null;
+            try
+            {
+                validDay = appointmentManager.GetDay(userInput);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("There are no appointments on this day");
+                return;
+            }
+            var appList = validDay.GetFreeAppointments();
             //check if there is any free appointment on that day
             if (appList.Count == 0)
             {
@@ -100,7 +110,10 @@ namespace VaccAppointment
             {
                 serializeUser();
             }
-            
+            else
+            {
+                Console.WriteLine("There was an error, please try again");
+            }
         }
 
         private void RegisterForWaitingList()
@@ -161,14 +174,16 @@ namespace VaccAppointment
 
         private string getAndValidateDate()
         {
-            Console.WriteLine("Please give your birthday now (Format: dd.mm.yyyy):");
-            string birthdayInput = Console.ReadLine();
+
+            string birthdayInput = string.Empty;
             Exception exception = new Exception();
             DateTime resDate = new DateTime();
             do
             {
                 try
                 {
+                    Console.WriteLine("Please give your birthday now (Format: dd.mm.yyyy):");
+                    birthdayInput = Console.ReadLine();
                     resDate = HelperMethods.CreateDateTimeFromFormattedString(birthdayInput);
                     exception = null;
                 }
@@ -181,7 +196,6 @@ namespace VaccAppointment
             return resDate.ToShortDateString();
         }
 
-       
         //saves all the user data 
         private void serializeUser()
         {

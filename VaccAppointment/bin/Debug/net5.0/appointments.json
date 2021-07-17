@@ -4,44 +4,16 @@
       "Date": "23.07.2021",
       "Appointments": [
         {
-          "Mail": "vm@vm.de",
+          "Mail": "vincentmattes@googlemail.com",
           "IsGiven": true,
-          "Uuid": "6b025372-d434-468b-9581-01e47135ccc8",
+          "Uuid": "2cea409d-760e-409d-8b94-67c8b4f05211",
           "Time": "11:00"
         },
         {
-          "Mail": "valsch@pochis.de",
-          "IsGiven": true,
-          "Uuid": "5728dd32-1b5b-4217-9b6b-6fcdb621d0fc",
-          "Time": "11:10"
-        }
-      ]
-    },
-    {
-      "Date": "02.10.2021",
-      "Appointments": [
-        {
-          "Mail": "vm@gmx.de",
-          "IsGiven": true,
-          "Uuid": "06333ed9-35c8-4e43-aa35-8bc078403a4f",
-          "Time": "07:00"
-        }
-      ]
-    },
-    {
-      "Date": "31.12.2021",
-      "Appointments": [
-        {
-          "Mail": "vin.mat@gmail.com",
-          "IsGiven": true,
-          "Uuid": "383bf80d-0550-4ccc-bd63-b53c51da9415",
-          "Time": "12:00"
-        },
-        {
-          "Mail": "vincentmattes@gmail.com",
-          "IsGiven": true,
-          "Uuid": "b1f05baf-28e3-4129-ac9c-bd647678d58c",
-          "Time": "11:50"
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "bae81737-5710-4868-87ab-8d7bf4494941",
+          "Time": "11:30"
         }
       ]
     }

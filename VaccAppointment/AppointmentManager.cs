@@ -87,7 +87,8 @@ namespace VaccAppointment
                 if (dayElement.Date.Equals(day.Date))
                     return dayElement;
             }
-            return null;
+
+            throw new Exception("This day does not exist yet");
         }
         #endregion
         

@@ -6,7 +6,6 @@ namespace ConsoleManager
     {
         public void KillProgramm()
         {
-            Console.WriteLine("bin im exit");
             Environment.Exit(1);
         }
     }

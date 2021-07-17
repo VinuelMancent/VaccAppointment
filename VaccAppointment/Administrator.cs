@@ -28,6 +28,8 @@ namespace VaccAppointment
                 Console.WriteLine("Password (casesensitive):");
                 string passwordInput = Console.ReadLine();
                 Login(usernameInput, passwordInput);
+                if (!this.isLoggedIn)
+                    Console.WriteLine("Error, username and/or password were incorrect, please try again");
             } while (!this.isLoggedIn);
             Console.WriteLine("You are successfully logged in!");
         }
@@ -48,22 +50,59 @@ namespace VaccAppointment
             var day = HelperMethods.CreateDayFromUserInput("On which day should the new appointment(s) be?");
             //check if day is already available
             appointmentManager.AddDay(day, true);
-            //
-            Console.WriteLine("Timeframe from (format: hh:mm):");
-            string timeframeFrom = Console.ReadLine();
-            Console.WriteLine("Timeframe to (format: hh:mm):");
-            string timeframeTo = Console.ReadLine();
-            Console.WriteLine("parallel vaccinations:");
-            string parallelVaccinations = Console.ReadLine();
-            Console.WriteLine("time interval in minutes:");
-            string timeInterval = Console.ReadLine();
+            //get viable timeframe
+            string timeframeFrom;
+            string timeframeTo;
+            bool succ;
+            do
+            {
+                timeframeFrom = HelperMethods.CreateDateTimeFromUserInput("Timeframe from");
+                timeframeTo = HelperMethods.CreateDateTimeFromUserInput("Timeframe to");
+                succ = isTimeframeViable(timeframeFrom, timeframeTo);
+                if (!succ)
+                    Console.WriteLine("Error, start time has to be before or equal to end time");
+            } while (!succ);
+            //get user input: How many vaccinations should be parallel
+            int parallelVaccinations = 0;
+            Exception error = new Exception();
+            do
+            {
+                try
+                {
+                    Console.WriteLine("parallel vaccinations:");
+                    parallelVaccinations = int.Parse(Console.ReadLine());
+                    error = null;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("your input has to be an int, please try again");
+                    error = e;
+                }
+            } while (error != null);
+            //get user input: How much difference should be between vacc appointments
+            int timeInterval = 0;
+            do
+            {
+                try
+                {
+                    Console.WriteLine("time interval in minutes:");
+                    timeInterval = int.Parse(Console.ReadLine());
+                    error = null;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("your input has to be an int, please try again");
+                    error = e;
+                }
+            } while (error != null);
+            
             //compute how many appointments have to be created
             int totalAppointmentsToCreate = HelperMethods.DifferenceBetweenTimesInMinutes(timeframeFrom, timeframeTo) /
-                int.Parse(timeInterval) * int.Parse(parallelVaccinations);
+                timeInterval * parallelVaccinations;
             for (int i = 0; i < totalAppointmentsToCreate; i++)
             {
                 //time from the beginning of the appointments + computed time passed since then
-                int minutesPassed = (i / int.Parse(parallelVaccinations)) * int.Parse(timeInterval);
+                int minutesPassed = (i / parallelVaccinations) * timeInterval;
                 DateTime vaccTime = HelperMethods.CreateDateTimeFromFormattedString(day.Date, timeframeFrom).AddMinutes(minutesPassed);
                 Appointment app = new Appointment(day.Date, vaccTime.ToShortTimeString());
                 appointmentManager.AddAppointmentOnDay(day, app);
@@ -86,7 +125,17 @@ namespace VaccAppointment
         }
         private void ShowInformationOneDay(Day day)
         {
-            if (appointmentManager.GetDay(day).CalculatePercentageTaken() < 100)
+            Day validDay = null;
+            try
+            {
+                validDay = appointmentManager.GetDay(day);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("There are no appointments (neither free nor taken) on this day");
+                return;
+            }
+            if (validDay.CalculatePercentageTaken() < 100)
             {
                 ConsoleManager.ConsoleManager cm = new ConsoleManager.ConsoleManager("choose if you want to ", "");
                 cm.AddOption(new Option("ShowOccupiedPercentage", "1",() => ShowOccupiedPercentage(day), 
@@ -134,6 +183,14 @@ namespace VaccAppointment
             }
         }
 
+        private bool isTimeframeViable(string timeframe1, string timeframe2)
+        {
+            var time1 = HelperMethods.CreateDateTimeFromFormattedString(HelperMethods.PlaceholderDate, timeframe1);
+            var time2 = HelperMethods.CreateDateTimeFromFormattedString(HelperMethods.PlaceholderDate, timeframe2);
+            if (DateTime.Compare(time1, time2) <= 0)
+                return true;
+            return false;
+        }
         private void showAllAppointments()
         {
             var allAppointments = appointmentManager.CountAllAppointments();
