@@ -17,7 +17,7 @@ namespace VaccAppointment
             this.IsGiven = false;
             Uuid = Guid.NewGuid().ToString();
             this.date = date;
-            Time = HelperMethods.CreateDateTimeFromFormattedString(HelperMethods.placeholderDate, time).ToShortTimeString();
+            Time = HelperMethods.CreateDateTimeFromFormattedString(HelperMethods.PlaceholderDate, time).ToShortTimeString();
         }
 
         public Appointment(bool isGiven, string uuid, string date, string time, string mail)

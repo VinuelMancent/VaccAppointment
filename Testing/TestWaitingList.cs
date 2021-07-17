@@ -13,7 +13,7 @@ namespace Testing
         public void TestSerialize()
         {
             WaitingList wl = WaitingList.GetInstance();
-            wl.AddUser(new User("vincent", "mattes", "", "10.02.1998", "vin@mat.com", "geißb.15", "01739775822"));
+            wl.AddUserListUser(new User("vincent", "mattes", "", "10.02.1998", "vin@mat.com", "geißb.15", "01739775822"));
             //wl.serialize();
         }
     }

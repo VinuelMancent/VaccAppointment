@@ -175,11 +175,12 @@ namespace VaccAppointment
 
         public string GetClosestFreeFutureAppointment()
         {
+            SortAppointmentList();
             foreach (var day in days)
             {
                 foreach (var app in day.Appointments)
                 {
-                    if (app.IsInFuture())
+                    if (app.IsInFuture() && !app.IsGiven)
                     {
                         return app.Uuid;
                     }

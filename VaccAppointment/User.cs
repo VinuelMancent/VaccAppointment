@@ -75,20 +75,21 @@ namespace VaccAppointment
         {
             Console.WriteLine("Please now give in the ID of your wanted appointment:");
             string uuidInput = Console.ReadLine();
-            string mailInput = getAndValidatealidateEmail();
+            string mailInput =
+                HelperMethods.GetAndValidateUserInput("Please now give your Mail-Address:", HelperMethods.MailPattern);
             //check if mailaddress is already used for an appointment
             if (mailInUse(mailInput))
             {
                 Console.WriteLine("your mail is already in use, sorry");
                 return;
             }
-            string prenameInput = getAndValidatePreName();
-            Console.WriteLine("Please now give your surname:");
-            string surnameInput = Console.ReadLine();
-            Console.WriteLine("Please now give your birthday (Format: dd.mm.yyyy):");
-            string birthdayInput = Console.ReadLine();
-            Console.WriteLine("Please now give your phonenumber:");
-            string phonenumberInput = Console.ReadLine();
+            string prenameInput =
+                HelperMethods.GetAndValidateUserInput("Please now give your prename:", HelperMethods.NamePattern);
+            string surnameInput =
+                HelperMethods.GetAndValidateUserInput("Please now give your surname:", HelperMethods.NamePattern);
+            string birthdayInput = getAndValidateDate();
+            string phonenumberInput = HelperMethods.GetAndValidateUserInput("Please now give your phonenumber:",
+                HelperMethods.PhonenumberPattern);
             Console.WriteLine("Please now give your address:");
             string addressInput = Console.ReadLine();
             //if all entries are valid: give them to the user
@@ -104,25 +105,28 @@ namespace VaccAppointment
 
         private void RegisterForWaitingList()
         {
-            string mailInput = getAndValidatealidateEmail();
+            string mailInput =
+                HelperMethods.GetAndValidateUserInput("Please now give your Mail-Address:", HelperMethods.MailPattern);
             //check if mailaddress is already used for an appointment
             if (mailInUse(mailInput))
             {
                 Console.WriteLine("your mail is already in use, sorry");
                 return;
             }
-            string prenameInput = getAndValidatePreName();
-            Console.WriteLine("Please now give your surname:");
-            string surnameInput = Console.ReadLine();
-            Console.WriteLine("Please now give your birthday (Format: dd.mm.yyyy):");
-            string birthdayInput = Console.ReadLine();
-            Console.WriteLine("Please now give your phonenumber:");
-            string phonenumberInput = Console.ReadLine();
+
+            string prenameInput =
+                HelperMethods.GetAndValidateUserInput("Please now give your prename:", HelperMethods.NamePattern);
+            string surnameInput =
+                HelperMethods.GetAndValidateUserInput("Please now give your surname:", HelperMethods.NamePattern);
+            string birthdayInput = getAndValidateDate();
+            string phonenumberInput = HelperMethods.GetAndValidateUserInput("Please now give your phonenumber:",
+                HelperMethods.PhonenumberPattern);
             Console.WriteLine("Please now give your address:");
             string addressInput = Console.ReadLine();
             //if all entries are valid: give them to the user
             setUserInfos(prenameInput, surnameInput, "", birthdayInput, mailInput, addressInput, phonenumberInput );
-            waitingList.AddUser(this);
+            this.serializeUser();
+            waitingList.AddWaitingListUser(this);
             waitingList.Serialize();
         }
         //prename, surname, uuid, birthday, mail, address, phonenumber;
@@ -152,44 +156,33 @@ namespace VaccAppointment
                 }
             }
             return false;
-            
         }
-        private string getAndValidatealidateEmail()
+        
+
+        private string getAndValidateDate()
         {
-            string pattern = @"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*" // local-part
-                             + "@"
-                             + @"((([\w]+([-\w]*[\w]+)*\.)+[a-zA-Z]+)|" // domain
-                             + @"((([01]?[0-9]{1,2}|2[0-4][0-9]|25[0-5]).){3}[01]?[0-9]{1,2}|2[0-4][0-9]|25[0-5]))\z";
-            string mail = "";
-            bool success = false;
-            Regex regex = new Regex(pattern);
+            Console.WriteLine("Please give your birthday now (Format: dd.mm.yyyy):");
+            string birthdayInput = Console.ReadLine();
+            Exception exception = new Exception();
+            DateTime resDate = new DateTime();
             do
             {
-                Console.WriteLine("Please give your e-mail address now");
-                mail = Console.ReadLine();
-                success = Regex.IsMatch(mail, pattern);
-                if (!success!)
-                    Console.WriteLine($"{mail} is not a correct mail-format, please try again");
-            } while (!success);
-            return mail;
-        }
-        private string getAndValidatePreName()
-        {
-            string prename = "";
-            bool success = true;
-            string pattern = @"/^[a-z][a-z\s]*$/";
-            do
-            {
-                Console.WriteLine("Please now give your prename:");
-                prename = Console.ReadLine();
-                success = Regex.IsMatch(prename, pattern);
-                if (!success)
-                    Console.WriteLine($"{prename} is no viable prename");
-            } while (success);
-
-            return prename;
+                try
+                {
+                    resDate = HelperMethods.CreateDateTimeFromFormattedString(birthdayInput);
+                    exception = null;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"{birthdayInput} is no viable birthday, please try again");
+                    exception = e;
+                }
+            } while (exception != null);
+            return resDate.ToShortDateString();
         }
 
+       
+        //saves all the user data 
         private void serializeUser()
         {
             Kubernative.Fio.File userFile = new();

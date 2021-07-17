@@ -1,10 +1,17 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace VaccAppointment
 {
     public class HelperMethods
     {
-        public static string placeholderDate = "01.01.1960";
+        public static string PlaceholderDate = "01.01.1960";
+        public static string NamePattern = @"^[a-zA-Z]+$";
+        public static string MailPattern = @"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*" // local-part
+                + "@"
+                + @"((([\w]+([-\w]*[\w]+)*\.)+[a-zA-Z]+)|" // domain
+                + @"((([01]?[0-9]{1,2}|2[0-4][0-9]|25[0-5]).){3}[01]?[0-9]{1,2}|2[0-4][0-9]|25[0-5]))\z";
+        public static string PhonenumberPattern = @"^[0-9]+(\/[0-9]+)*$";
         //Creates a datetime for 
         public static DateTime CreateDateTimeFromFormattedString(string formatted)
         {
@@ -14,6 +21,17 @@ namespace VaccAppointment
             return res;
         }
 
+        public static string GetAndValidateUserInput(string message, string regex)
+        {
+            string userInput;
+            do
+            {
+                Console.WriteLine(message);
+                userInput = Console.ReadLine();
+            } while (Regex.IsMatch(regex, userInput));
+
+            return userInput;
+        }
         public static DateTime CreateDateTimeFromFormattedString(string formattedDay, string formattadTime)
         {
             //formattedDay format: dd.mm.yyyy, formattedTime format: hh:mm

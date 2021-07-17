@@ -14,7 +14,7 @@ namespace VaccAppointment
             //wenn eine Terminübersicht bereits vorhanden ist --> laden
             if(File.Exists("appointments.json"))
                 appointmentManager.DeserializeAppointments();
-            if(File.Exists("waitingList.yaml"))
+            if(File.Exists("waitingList.json"))
                 waitingList.Deserialize();
             Administrator admin = null;
             User user = null;
