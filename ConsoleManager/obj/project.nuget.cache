@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X60AgfKLVWHPEmDGFUk/x6jqPny8tmzN5LQsXr1Xqhqze/IrfWUaPm1m01LVmC415fVPBCLlIdFt+6ajHnsq0g==",
+  "dgSpecHash": "JygTo3ftYzZMP+9A43MplWtACQMsqG74tT64IxpTKjenb77f+sqCSV36eJIb5+/Er9qM5PW5HIHIkll0rfCXwQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Vincent\\Documents\\Uni\\SS21\\Softwaredesign\\Prüfung\\Code\\VaccAppointment\\ConsoleManager\\ConsoleManager.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Vincent\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\5.0.2\\microsoft.netcore.app.runtime.win-x64.5.0.2.nupkg.sha512",
-    "C:\\Users\\Vincent\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\5.0.2\\microsoft.windowsdesktop.app.runtime.win-x64.5.0.2.nupkg.sha512",
-    "C:\\Users\\Vincent\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\5.0.2\\microsoft.aspnetcore.app.runtime.win-x64.5.0.2.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,12 +1,18 @@
 {
   "Appointments": [
     {
-      "Date": "31.12.2021",
+      "Date": "11.11.2021",
       "Appointments": [
         {
-          "Mail": "test.mat@gmail.com",
-          "IsGiven": true,
-          "Uuid": "cb5f7960-c60f-46bf-9a9b-f817e218f987",
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "1878bcc5-a1ba-469b-92c9-b11f0bb75142",
+          "Time": "11:00"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "92db4b09-6187-4701-98f1-6650eb5743e8",
           "Time": "11:00"
         }
       ]
