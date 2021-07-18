@@ -71,9 +71,27 @@ namespace VaccAppointment
         }
         public static Day CreateDayFromUserInput()
         {
-            Console.WriteLine("From which day do you need Information? (Format: dd.mm.yyyy)");
-            string dayInput = Console.ReadLine();
-            return CreateDayFromFormattedString(dayInput);
+            string dayInput;
+            Day res = null;
+            Exception error = new();
+            do
+            {
+                try
+                {
+                    Console.WriteLine("From which day do you need Information? (Format: dd.mm.yyyy)");
+                    dayInput = Console.ReadLine();
+                    res = CreateDayFromFormattedString(dayInput);
+                    error = null;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Your input was no correct date, please try again");
+                    error = e;
+                }
+            } while (error != null);
+           
+           
+            return res;
         }
         public static Day CreateDayFromUserInput(string message)
         {
