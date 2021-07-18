@@ -1,7 +1,8 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {},
+    "net5.0/win-x64": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
@@ -13,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vincent\\RiderProjects\\VaccAppointment\\ConsoleManager\\ConsoleManager.csproj",
+      "projectUniqueName": "C:\\Users\\Vincent\\Documents\\Uni\\SS21\\Softwaredesign\\Prüfung\\Code\\VaccAppointment\\ConsoleManager\\ConsoleManager.csproj",
       "projectName": "ConsoleManager",
-      "projectPath": "C:\\Users\\Vincent\\RiderProjects\\VaccAppointment\\ConsoleManager\\ConsoleManager.csproj",
+      "projectPath": "C:\\Users\\Vincent\\Documents\\Uni\\SS21\\Softwaredesign\\Prüfung\\Code\\VaccAppointment\\ConsoleManager\\ConsoleManager.csproj",
       "packagesPath": "C:\\Users\\Vincent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vincent\\RiderProjects\\VaccAppointment\\ConsoleManager\\obj\\",
+      "outputPath": "C:\\Users\\Vincent\\Documents\\Uni\\SS21\\Softwaredesign\\Prüfung\\Code\\VaccAppointment\\ConsoleManager\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vincent\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -53,12 +54,31 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "version": "[5.0.2, 5.0.2]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
+            "version": "[5.0.2, 5.0.2]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+            "version": "[5.0.2, 5.0.2]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Vincent\\.dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
       }
     }
   }

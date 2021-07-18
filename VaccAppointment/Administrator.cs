@@ -71,11 +71,17 @@ namespace VaccAppointment
                 {
                     Console.WriteLine("parallel vaccinations:");
                     parallelVaccinations = int.Parse(Console.ReadLine());
-                    error = null;
+                    if (parallelVaccinations <= 0)
+                        throw new Exception("input has to be above 0");
+                    else
+                    {
+                        error = null;
+                    }
+
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("your input has to be an int, please try again");
+                    Console.WriteLine("your input has to be an int above 0, please try again");
                     error = e;
                 }
             } while (error != null);
@@ -97,8 +103,23 @@ namespace VaccAppointment
             } while (error != null);
             
             //compute how many appointments have to be created
+            //Bugfix: when time between Appointments is set to 0 an error gets created since you would divide by zero, so i set the timeInterval to the difference between timeframe start and timeframe end
+            if (timeInterval <= 0 && HelperMethods.DifferenceBetweenTimesInMinutes(timeframeFrom, timeframeTo) > 0)
+            {
+                timeInterval = HelperMethods.DifferenceBetweenTimesInMinutes(timeframeFrom, timeframeTo);
+            } //if the difference is 0, you can simply set timeInterval to a random positive int
+            else
+            {
+                timeInterval = int.MaxValue;
+            }
             int totalAppointmentsToCreate = HelperMethods.DifferenceBetweenTimesInMinutes(timeframeFrom, timeframeTo) /
                 timeInterval * parallelVaccinations;
+            //Bugfix: if the difference between the timeframe start and timeframe end is 0, no appointment gets created. But since it's a viable option to say i only want appointments 
+            //on this time exactly i set the totalAppointmentsToCreate to the amount of parallel appointments
+            if (totalAppointmentsToCreate == 0)
+            {
+                totalAppointmentsToCreate = parallelVaccinations;
+            }
             for (int i = 0; i < totalAppointmentsToCreate; i++)
             {
                 //time from the beginning of the appointments + computed time passed since then

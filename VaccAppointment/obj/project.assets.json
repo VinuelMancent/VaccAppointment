@@ -30,6 +30,36 @@
           "bin/placeholder/ConsoleManager.dll": {}
         }
       }
+    },
+    "net5.0/win-x64": {
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "YamlDotNet/11.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/YamlDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/YamlDotNet.dll": {}
+        }
+      },
+      "ConsoleManager/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ConsoleManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConsoleManager.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -104,11 +134,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vincent\\RiderProjects\\VaccAppointment\\VaccAppointment\\VaccAppointment.csproj",
+      "projectUniqueName": "C:\\Users\\Vincent\\Documents\\Uni\\SS21\\Softwaredesign\\Prüfung\\Code\\VaccAppointment\\VaccAppointment\\VaccAppointment.csproj",
       "projectName": "VaccAppointment",
-      "projectPath": "C:\\Users\\Vincent\\RiderProjects\\VaccAppointment\\VaccAppointment\\VaccAppointment.csproj",
+      "projectPath": "C:\\Users\\Vincent\\Documents\\Uni\\SS21\\Softwaredesign\\Prüfung\\Code\\VaccAppointment\\VaccAppointment\\VaccAppointment.csproj",
       "packagesPath": "C:\\Users\\Vincent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vincent\\RiderProjects\\VaccAppointment\\VaccAppointment\\obj\\",
+      "outputPath": "C:\\Users\\Vincent\\Documents\\Uni\\SS21\\Softwaredesign\\Prüfung\\Code\\VaccAppointment\\VaccAppointment\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vincent\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -123,8 +153,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Vincent\\RiderProjects\\VaccAppointment\\ConsoleManager\\ConsoleManager.csproj": {
-              "projectPath": "C:\\Users\\Vincent\\RiderProjects\\VaccAppointment\\ConsoleManager\\ConsoleManager.csproj"
+            "C:\\Users\\Vincent\\Documents\\Uni\\SS21\\Softwaredesign\\Prüfung\\Code\\VaccAppointment\\ConsoleManager\\ConsoleManager.csproj": {
+              "projectPath": "C:\\Users\\Vincent\\Documents\\Uni\\SS21\\Softwaredesign\\Prüfung\\Code\\VaccAppointment\\ConsoleManager\\ConsoleManager.csproj"
             }
           }
         }
@@ -158,12 +188,31 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "version": "[5.0.2, 5.0.2]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
+            "version": "[5.0.2, 5.0.2]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+            "version": "[5.0.2, 5.0.2]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Vincent\\.dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
       }
     }
   }

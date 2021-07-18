@@ -17,7 +17,6 @@ C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment
 C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\VaccAppointment\bin\Debug\net5.0\ConsoleManager.dll
 C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\VaccAppointment\bin\Debug\net5.0\ConsoleManager.pdb
 C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\VaccAppointment\obj\Debug\net5.0\VaccAppointment.csproj.CopyComplete
-C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\VaccAppointment\bin\Debug\net5.0\Kubernative.Toolchain.dll
 C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\VaccAppointment\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\Vincent\Documents\Uni\SS21\Softwaredesign\Prüfung\Code\VaccAppointment\VaccAppointment\bin\Debug\net5.0\YamlDotNet.dll
 C:\Users\Vincent\RiderProjects\VaccAppointment\VaccAppointment\bin\Debug\net5.0\VaccAppointment.exe

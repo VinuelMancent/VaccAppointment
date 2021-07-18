@@ -16,6 +16,46 @@
           "Time": "11:30"
         }
       ]
+    },
+    {
+      "Date": "20.10.2021",
+      "Appointments": [
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "b57ff7a8-4978-4fd4-bd7a-fc867b7a7fad",
+          "Time": "11:00"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "2eeeb1bf-f958-4f12-bcaf-4db6456d0fb5",
+          "Time": "11:00"
+        }
+      ]
+    },
+    {
+      "Date": "11.11.2021",
+      "Appointments": [
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "77efe9e4-fecb-4594-9b52-8822af30462a",
+          "Time": "11:00"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "633b39ad-1c19-411c-ab2c-a48f2f60dc38",
+          "Time": "11:00"
+        },
+        {
+          "Mail": "",
+          "IsGiven": false,
+          "Uuid": "2a748d5e-b5f1-4069-922c-dd05274418f4",
+          "Time": "11:00"
+        }
+      ]
     }
   ]
 }
