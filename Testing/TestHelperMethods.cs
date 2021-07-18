@@ -12,7 +12,8 @@ namespace Testing
         [TestMethod]
         public void TestDifferenceBetweenTimesInMinutes()
         {
-            Console.WriteLine(HelperMethods.DifferenceBetweenTimesInMinutes("12:30", "22:30"));
+            int diff = HelperMethods.DifferenceBetweenTimesInMinutes("12:30", "13:30");
+            Assert.AreEqual(diff, 60);
         }
     }
 }
